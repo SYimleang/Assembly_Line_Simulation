@@ -22,4 +22,4 @@ public:
 	// Returns the delimiter for this class.
 	static char getDelimiter();
 };
-#endif //!SDDS_UTILITIES_H
+#endif //!UTILITIES_H
