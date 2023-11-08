@@ -41,7 +41,7 @@ const std::string& Station::getItemName() const
 // Returns "m_serialNum"
 size_t Station::getNextSerialNumber()
 {
-	return m_serialNum;
+	return m_serialNum++;
 }
 
 // Returns "m_qty"
