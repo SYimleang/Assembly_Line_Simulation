@@ -1,4 +1,4 @@
-Command Line: ms1 Stations1.txt Stations2.txt
+Command Line: ms2 Stations1.txt Stations2.txt CustomerOrders.txt
 
 ========================================
 =         Stations (summary)           =
@@ -35,6 +35,7 @@ getNextSerialNumber(): 654322
 getQuantity(): 10
 getQuantity(): 9
 
+
 ========================================
 =              Utilities               =
 ========================================
@@ -61,3 +62,97 @@ Data: [Gengar|Arcanine|Bulbasaur|Blaziken|C h a r i z a r d|Umbreon|Lucario|Eeve
    Token: [Umbreon] [17]
    Token: [Lucario] [17]
    Token: [Eevee] [17]
+========================================
+=                Orders                =
+========================================
+Cornel B. - 1-Room Home Office
+[000000] Office Chair                   - TO BE FILLED
+[000000] Desk                           - TO BE FILLED
+[000000] Bookcase                       - TO BE FILLED
+[000000] Bookcase                       - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+Chris S. - Bedroom
+[000000] Bed                            - TO BE FILLED
+[000000] Armchair                       - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Dresser                        - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+John M. - Kids Bedroom
+[000000] Bed                            - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Dresser                        - TO BE FILLED
+[000000] Desk                           - TO BE FILLED
+Hong H. - 1-Room Office
+[000000] Desk                           - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Bookcase                       - TO BE FILLED
+Rania A. - 2-Room Home Office and Bedroom
+[000000] Desk                           - TO BE FILLED
+[000000] Desk                           - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Armchair                       - TO BE FILLED
+[000000] Dresser                        - TO BE FILLED
+
+
+========================================
+=          Manual Validation           =
+========================================
+CustomerOrders::display(): Rania A. - 2-Room Home Office and Bedroom
+[000000] Desk                           - TO BE FILLED
+[000000] Desk                           - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Armchair                       - TO BE FILLED
+[000000] Dresser                        - TO BE FILLED
+
+CustomerOrders::CustomerOrders(&): ----> ERROR: Cannot make copies.
+
+CustomerOrders::CustomerOrders(&&): Rania A. - 2-Room Home Office and Bedroom
+[000000] Desk                           - TO BE FILLED
+[000000] Desk                           - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Bed                            - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Nighttable                     - TO BE FILLED
+[000000] Armchair                       - TO BE FILLED
+[000000] Dresser                        - TO BE FILLED
+
+CustomerOrders::CustomerOrders(string): Chloe - Flight PC
+[000000] CPU                            - TO BE FILLED
+[000000] GPU                            - TO BE FILLED
+[000000] Power Supply                   - TO BE FILLED
+
+CustomerOrders::operator=(&&): Hong H. - 1-Room Office
+[000000] Desk                           - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Office Chair                   - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Filing Cabinet                 - TO BE FILLED
+[000000] Bookcase                       - TO BE FILLED
+
+CustomerOrders::fillItem()
+isOrderFilled(): MISSING
+isItemFilled("CPU"): FILLED
+isOrderFilled(): MISSING
+    Filled Hong H., 1-Room Office [Filing Cabinet]
+    Filled Hong H., 1-Room Office [Office Chair]
+    Filled Hong H., 1-Room Office [Bookcase]
+    Filled Hong H., 1-Room Office [Desk]
+isOrderFilled(): MISSING

@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Utilities.h"
 
+// Initialize "m_delimiter"
 char Utilities::m_delimiter = '/';
 
-// Sets the field width of the current object to the recieved value
+// Sets the field width of the current object to the received value
 void Utilities::setFieldWidth(size_t newWidth)
 {
 	m_widthField = newWidth;
@@ -20,7 +21,7 @@ std::string Utilities::extractToken(const std::string& str, size_t& next_pos, bo
 {
 	std::string token;
 
-	// Find the delimeter in "str" until recieved position (next_pos)
+	// Find the delimeter in "str" until received position (next_pos)
 	size_t pos = str.find(m_delimiter, next_pos);
 
 	// Checks if the delimiter is found in "str"
@@ -82,5 +83,3 @@ char Utilities::getDelimiter()
 {
 	return m_delimiter;
 }
-
-
